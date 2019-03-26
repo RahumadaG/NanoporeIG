@@ -1,0 +1,19 @@
+load("datos_total.RData")
+
+datos<-as.data.frame(cbind(as.character(datos_total$read_id), as.numeric(as.character(datos_total$mean_qscore_template))))
+colnames(datos)<-c("read_id","mean_qscore_template")
+# <= 7 y <8
+#read_id_7<-as.character(datos[as.numeric(as.character(datos$mean_qscore_template)) >= 7 & as.numeric(as.character(datos$mean_qscore_template))< 8,]$read_id)
+# <= 8 y <9
+read_id_8<-as.character(datos[as.numeric(as.character(datos$mean_qscore_template)) >= 8 & as.numeric(as.character(datos$mean_qscore_template))< 9,]$read_id)
+# <= 9 
+#read_id_9<-as.character(datos[as.numeric(as.character(datos$mean_qscore_template)) >= 9,]$read_id)
+
+for(i in 1:length(read_id_8)){
+  
+  print(paste0(i, ": ", read_id_8[i]))
+  
+  file.copy(from = paste0("fastas_individuales_2D_pass/",read_id_8[i],".fasta"), to=paste0("2D_pass_8/", read_id_8[i], ".fasta"))
+}
+
+
