@@ -1,0 +1,1 @@
+nohup fastqc todos_2D.fastq -t 4 &
