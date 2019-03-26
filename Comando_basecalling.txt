@@ -1,0 +1,7 @@
+#Basecalling 2D
+
+read_fast5_basecaller.py -f FLO-MIN107 -k SQK-LSK308 --output_format fast5,fastq -i ./input/ -s ./output_2D/ -t 8 --disable_filtering
+
+#Basecalling 1D2
+
+paired_read_basecaller.py -i ./output_2D/workspace/ -t 8 -s ./output_1D2/ -c /usr/lib64/python3.4/site-packages/albacore/data_versioned/r95_450bps_1dsq.cfg -d /usr/lib64/python3.4/site-packages/albacore/data_versioned/ -q 4000 -f ./output_2D/sequencing_summary.txt -r 
