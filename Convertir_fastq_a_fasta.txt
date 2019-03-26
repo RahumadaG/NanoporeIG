@@ -1,0 +1,8 @@
+
+#Unir archivos todos los archivos fastq
+
+cat carpeta_archivos_fastq/*.fastq
+
+#Convertir los archivos fastq a fasta
+
+cat todos_2D.fastq | awk '{if(NR%4==1) {printf(">%s\n",substr($0,2));} else if(NR%4==2) print;}' > todos_2D.fasta
