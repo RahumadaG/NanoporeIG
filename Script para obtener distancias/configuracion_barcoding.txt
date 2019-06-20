@@ -1,0 +1,14 @@
+barcoding
+barcoding_DCR.fasta
+barcoding_JGP.fasta
+barcoding_LAH.fasta
+barcoding_MAN.fasta
+barcoding_MVC.fasta
+Switching_Anchor.fasta
+barcoding_IGA.fasta
+barcoding_IGG.fasta
+barcoding_IGM.fasta
+barcoding_IGK.fasta
+barcoding_IGL_C.fasta
+barcoding_IGL_T.fasta
+barcoding_reverse.fasta
